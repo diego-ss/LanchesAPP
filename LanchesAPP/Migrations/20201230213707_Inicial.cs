@@ -2,7 +2,7 @@
 
 namespace LanchesAPP.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace LanchesAPP.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DescricaoCurta = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    DescricaoCurta = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     DescricaoDetalhada = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Preco = table.Column<double>(type: "float", nullable: false),
                     ImagemUrl = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),

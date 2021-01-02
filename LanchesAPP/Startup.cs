@@ -1,4 +1,5 @@
 using LanchesAPP.Context;
+using LanchesAPP.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,9 @@ namespace LanchesAPP
         {
             services.AddDbContext<AppDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+            services.AddTransient<ILancheRepository, LancheRepository>();
 
             services.AddControllersWithViews();
         }

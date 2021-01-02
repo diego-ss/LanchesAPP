@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LanchesAPP.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201230010341_Initial")]
-    partial class Initial
+    [Migration("20201230213707_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,8 +53,8 @@ namespace LanchesAPP.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("DescricaoCurta")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("DescricaoDetalhada")
                         .HasMaxLength(255)

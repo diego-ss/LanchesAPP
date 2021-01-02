@@ -12,7 +12,7 @@ namespace LanchesAPP.Models
         public string Nome { get; set; }
 
         [Display(Name = "Descrição Curta")]
-        [StringLength(50)]
+        [StringLength(100)]
         public string DescricaoCurta { get; set; }
 
         [Display(Name = "Descrição Detalhada")]

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Lanche>
+
+<div><h2>Todos os Lanches</h2></div>
+
+<div class="row">
+
+
+    @foreach (var lanche in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+
+            <div class="thumbnail">
+                <img src="@Url.Content(lanche.ImagemUrl)" class="img-rounded" alt="" />
+            </div>
+            <div class="figure-caption">
+                <h3 class=" text-black-50">@lanche.Preco.ToString("C2")</h3>
+                <h3>@lanche.Nome</h3>
+                <p>@lanche.DescricaoCurta</p>
+            </div>
+        </div>
+
+    }
+
+
+</div>
+
